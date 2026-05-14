@@ -1,0 +1,371 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stylish Creations | Ballston Spa Hair Salon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f7f3ef;
+      color: #2d2d2d;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .hero {
+      min-height: 100vh;
+      background:
+        linear-gradient(rgba(22,22,22,0.45), rgba(22,22,22,0.45)),
+        url('https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=1600&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 3rem 8%;
+      position: relative;
+    }
+
+    nav {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem 8%;
+      backdrop-filter: blur(8px);
+      background: rgba(0,0,0,0.12);
+    }
+
+    .logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      font-size: 0.95rem;
+    }
+
+    .hero-content {
+      max-width: 700px;
+      margin-top: 5rem;
+    }
+
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3rem, 8vw, 6rem);
+      line-height: 0.95;
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 580px;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 2rem;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 0.95rem 1.7rem;
+      border-radius: 999px;
+      font-weight: 500;
+      transition: 0.3s ease;
+    }
+
+    .btn-primary {
+      background: #d8b48c;
+      color: #1d1d1d;
+    }
+
+    .btn-primary:hover {
+      background: #e8c6a1;
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(255,255,255,0.6);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.1);
+    }
+
+    section {
+      padding: 6rem 8%;
+    }
+
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #1e1e1e;
+    }
+
+    .section-subtitle {
+      max-width: 700px;
+      color: #666;
+      margin-bottom: 3rem;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .service-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 24px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      transition: 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .service-card h3 {
+      margin-bottom: 0.7rem;
+      font-size: 1.2rem;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 340px;
+      object-fit: cover;
+      border-radius: 22px;
+    }
+
+    .reviews {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .review-card {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 24px;
+      border: 1px solid rgba(0,0,0,0.06);
+    }
+
+    .stars {
+      color: #c8965a;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+
+    .contact {
+      background: #1e1b18;
+      color: white;
+      border-radius: 32px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 3rem;
+    }
+
+    .contact-info h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hours {
+      margin-top: 1.5rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #777;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      section {
+        padding: 4rem 6%;
+      }
+
+      .hero {
+        padding: 2rem 6%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <nav>
+      <div class="logo">Stylish Creations</div>
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <div class="hero-content">
+      <h1>Elevated Haircare & Modern Style</h1>
+      <p>
+        A welcoming Ballston Spa salon offering beautiful cuts, perms,
+        color services, and family-friendly styling with a luxurious touch.
+      </p>
+
+      <div class="buttons">
+        <a class="btn btn-primary" href="tel:15188844878">Book Appointment</a>
+        <a class="btn btn-secondary" href="#services">Explore Services</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="services">
+    <h2 class="section-title">Salon Services</h2>
+    <p class="section-subtitle">
+      Stylish Creations combines personalized service with contemporary
+      salon artistry for clients of all ages.
+    </p>
+
+    <div class="services">
+      <div class="service-card">
+        <h3>Haircuts & Styling</h3>
+        <p>Modern cuts, layered styling, blowouts, and precision finishing.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Perms & Texture</h3>
+        <p>Soft waves, curls, and texture services tailored to your look.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Color Services</h3>
+        <p>Dimensional color, highlights, touch-ups, and refresh treatments.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Kids Haircuts</h3>
+        <p>Friendly, comfortable haircuts designed for children and families.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <h2 class="section-title">Inside the Salon</h2>
+    <p class="section-subtitle">
+      Warm interiors, refined styling, and an atmosphere built around comfort and confidence.
+    </p>
+
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=1200&auto=format&fit=crop" alt="Salon interior">
+      <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=1200&auto=format&fit=crop" alt="Hair styling">
+      <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1200&auto=format&fit=crop" alt="Hair salon">
+      <img src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?q=80&w=1200&auto=format&fit=crop" alt="Beauty service">
+    </div>
+  </section>
+
+  <section id="reviews">
+    <h2 class="section-title">Loved by Clients</h2>
+    <p class="section-subtitle">
+      Proudly rated 4.9 stars by local clients in Saratoga County.
+    </p>
+
+    <div class="reviews">
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>
+          “Warm atmosphere, great service, and one of the best haircuts I’ve had in years.”
+        </p>
+      </div>
+
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>
+          “Professional stylists who really listen to what you want. Highly recommend.”
+        </p>
+      </div>
+
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>
+          “Perfect place for family appointments — friendly, clean, and stylish.”
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="contact-info">
+      <h3>Visit Stylish Creations</h3>
+      <p>
+        404 Geyser Rd<br>
+        Ballston Spa, NY 12020
+      </p>
+
+      <div class="hours">
+        <strong>Hours</strong>
+        <p>Open daily • Closes at 6 PM</p>
+      </div>
+    </div>
+
+    <div class="contact-info">
+      <h3>Book Your Appointment</h3>
+      <p>
+        Phone: (518) 884-4878
+      </p>
+
+      <p style="margin-top: 1rem;">
+        Relaxed atmosphere • Restroom available • Good for kids
+      </p>
+
+      <div class="buttons" style="margin-top: 2rem;">
+        <a class="btn btn-primary" href="tel:15188844878">Call Salon</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Stylish Creations • Designed with elegance and simplicity.
+  </footer>
+
+</body>
+</html>
